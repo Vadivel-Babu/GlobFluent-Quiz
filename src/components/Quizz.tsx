@@ -54,7 +54,7 @@ const Quizz = () => {
           <h1 className="font-semibold text-2xl w-full sm:text-3xl mt-3 mb-5 sm:mb-10 lg:mb-52">
             {data?.data.length === 0 ? "hi" : data?.data[index].question}
           </h1>
-          <Progress percent={(index / data?.data.length) * 100} />
+          <Progress percent={Math.ceil((index / data?.data.length) * 100)} />
         </div>
         {isLoading ? (
           <p>Loading...</p>

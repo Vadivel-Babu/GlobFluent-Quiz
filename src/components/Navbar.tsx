@@ -7,20 +7,22 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-yellow-400 text-black py-5 px-10 text-lg flex justify-between">
-      <NavLink to="/">Quizz</NavLink>
-      {!user ? (
-        <NavLink to="/login">Login</NavLink>
-      ) : (
-        <button
-          onClick={() => {
-            logout();
-            navigate("/login");
-          }}
-        >
-          logout
-        </button>
-      )}
+    <div className="bg-yellow-400 text-black ">
+      <div className="py-5 px-10 text-lg flex justify-between max-w-[1400px] mx-auto">
+        <NavLink to="/">Quizz</NavLink>
+        {!user ? (
+          <NavLink to="/login">Login</NavLink>
+        ) : (
+          <button
+            onClick={() => {
+              logout();
+              navigate("/login");
+            }}
+          >
+            logout
+          </button>
+        )}
+      </div>
     </div>
   );
 };
